@@ -22,12 +22,13 @@
 }*/
 int prime(int n)
 {
-    int i, x, j, flag;
-    flag = 1;
+    int i, x, j;
+   int flag = 1;
     x = sqrt(n);
-    for (j = 3; j <= n; j++)
+    for (i = 2; i <= x; i++)
+    
     {
-        for (i = 2; i <= x; i++)
+        for (j = 3; j <= n; j++)
         {
             if (j%i == 0)
             {
@@ -35,17 +36,15 @@ int prime(int n)
                 break;
             }
         }
-        if (flag == 1)
-        {
-            printf("\n%d", j);
-            break;
+        
         }
     }
-}
-int main()
+
+void main()
 {
-    int n;
+    int x,n;
     printf("enter the number");
     scanf("%d", &n);
-    prime(n);
+   prime(n);
+   
 }
