@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include<math.h>
+
+
+int main()
+{
+    int a,b,c,d;
+    char i;
+    float e,x1,x2;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    scanf("%d",&c);
+    d=b*b-4*a*c;
+    
+   
+    if(d>0)
+    {
+        printf("real and distinct");
+        e=sqrt(d);
+        x1=(-b+e)/(2.0*a);
+        x2=(-b-e)/(2.0*a);
+        printf("%f %f",x1,x2);
+        
+    }
+    else if(d<0)
+    {
+        d=-d;
+        e=sqrt(d);
+        e=e/(2.0*a);
+        printf("imaginary and distinct");
+        x1=(-b)/(2.0*a);
+        x2=(-b)/(2.0*a);
+          printf("%f+%f",x1,e);
+          printf("i\n");
+           printf("%f-%f",x1,e);
+          printf("i\n");
+
+    }
+    else
+    {
+        printf("real and equal");
+        x1=-b/(2*a);
+        x2=(-b)/(2*a);
+          printf("%f %f",x1,x2);
+    }
+    
+    
+}
